@@ -1,0 +1,31 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  title Đề tài Lập trình mạng
+  link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css')
+.container
+  .row
+    .col-sm-8.col-sm-offset-2(style='margin-top: 50px;')
+      .panel.panel-info
+        .panel-heading
+          h3.panel-title Hash MD5 / SHA-1 / SHA-256
+        .panel-body
+            legend Upload file
+            .form-group
+              label(for='') File
+              input#inputFile.form-control(type='file', name='file')
+              input#md5(type='radio', name='typehash', value='md5')
+              label(for='md5') MD5
+              input#sha1(type='radio', name='typehash', value='sha1')
+              label(for='sha1') SHA-1
+              input#sha256(type='radio', name='typehash', value='sha256')
+              label(for='sha256') SHA-256 
+              br
+              br
+              button#submitFile.btn.btn-primary(type='submit') Submit
+            label(for='') Mã băm (HashCode)
+            textarea#hash_string(name='hash_string_text', rows='1', cols='62')
+            //- input#hash_string.hash_string_text(readonly=true,type='text')
+script(src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js")
+script(src="http://localhost:9080/script.js")
